@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ac.jeju.repository.ProductListDao">
+	<select id="findAll" resultType="Product" >
+		select 
+			image, name, price, seller
+		from productList
+	</select>
+	<insert id="insert" parameterType="Product">
+		insert into productList(image,name,price,seller) values(#{image}, #{name}, #{price}, #{seller})
+	</insert>
+	<delete id="delete">
+		delete from productList where name = #{name}
+	</delete>
+	<select id="findByName" resultType="product">
+		select 
+			image, name, price, seller	
+		from productList where name = #{name}
+	</select>
+
+	<update id="update" parameterType="product"> 
+		update product set image=#{image}, name=#{name}, price=#{price}, seller=#{seller} where name = #{name}
+	</update> 
+</mapper>
