@@ -1,0 +1,19 @@
+body {
+    margin: 50px auto;
+    width:700px;
+    text-align: center;
+}
+
+.box {
+    width:400px;
+    margin:auto;
+}
+
+thead th {
+    text-align: center;
+}
+
+.userSign {
+    margin-left:70%;
+    margin-bottom:30px;
+}
