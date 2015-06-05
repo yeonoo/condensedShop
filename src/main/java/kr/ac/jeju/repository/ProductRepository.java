@@ -8,10 +8,7 @@ import kr.ac.jeju.model.Product;
 
 @Repository
 public interface ProductRepository {
-
 	List<Product> findAll();
-
 	void insert(Product product);
-
-
+	void delete(Product product);
 }

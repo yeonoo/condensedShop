@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="/resources/condensed-shop.css" />
     </head>
     <body>
-   		<c:forEach items="${productList}" var="product">
+   		<c:forEach items="${productInfo}" var="product">
         <div class="box">
             <div id="statusBtn">
                 <button class="btn btn-success">목록</button>

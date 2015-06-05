@@ -21,6 +21,7 @@
 						<th>상품명</th>
 						<th>가격</th>
 						<th>판매자</th>
+						<th></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -30,6 +31,7 @@
 						<td><a href="info?id=${product.id}">${product.title }</a></td>
 						<td>${product.price }</td>
 						<td>${product.provider }</td>
+						<td><a href="delete?id=${product.id}"><span class="btn btn-default">삭제</span></a></td>
 					</tr>
 					</c:forEach>
 				</tbody>

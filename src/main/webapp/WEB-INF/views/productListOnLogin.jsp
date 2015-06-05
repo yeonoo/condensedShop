@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c"    uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 <html lang="ko">
     <head>
@@ -12,7 +13,7 @@
             <div>
                 <div class="aside">
                     <strong>이연우</strong><span>님 안녕하세요.</span>
-                    <button type="button" class="btn btn-info">상품등록</button>
+                    <a href="productRegist.jeju"><button type="button" class="btn btn-info">상품등록</button></a>
                 </div>
                 <div id="statusBtn">
                     <button type="button" class="btn btn-default">로그아웃</button>
@@ -28,73 +29,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="###"></th>
-                        <td>품질 좋은 상품 A 20% 할인판매</td>
-                        <td>15,000</td>
-                        <td>(주)제주대학교</td>
-                    </tr>
-                </tbody>
+                    <c:forEach items="${productList}" var="product">
+					<tr>
+						<th scope="row">${product.image }</th>
+						<td><a href="info?id=${product.id}">${product.title }</a></td>
+						<td>${product.price }</td>
+						<td>${product.provider }</td>
+					</tr>
+					</c:forEach>
+				</tbody>
             </table>
             <div>
                 <a href="##">이전</a>
