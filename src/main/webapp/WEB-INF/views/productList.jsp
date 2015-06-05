@@ -27,9 +27,9 @@
 					<c:forEach items="${productList}" var="product">
 					<tr>
 						<th scope="row">${product.image }</th>
-						<td>${product.name }</td>
+						<td><a href="info?id=${product.id}">${product.title }</a></td>
 						<td>${product.price }</td>
-						<td>${product.seller }</td>
+						<td>${product.provider }</td>
 					</tr>
 					</c:forEach>
 				</tbody>

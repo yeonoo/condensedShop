@@ -13,11 +13,10 @@
 		<property name="username" value="yeonoo" />
 		<property name="password" value="db127" />
 	</bean>
-
 	
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="typeAliasesPackage" value="kr.ac.jeju"/>
+		<property name="typeAliasesPackage" value="kr.ac.jeju.model"/>
 	</bean>
 
 	<bean id="mapperScannerConfigurer" class="org.mybatis.spring.mapper.MapperScannerConfigurer">

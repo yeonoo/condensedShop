@@ -26,9 +26,11 @@
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
-					<button type="submit" class="btn btn-default">로그인</button>
-					<button type="button" class="btn btn-default">취소</button>
 				</fieldset>
+				<div class="footer">
+						<button type="submit" class="btn btn-default">로그인</button>
+						<button type="button" class="btn btn-default">취소</button>
+				</div>
 			</form>
 		</div>
 	</body>

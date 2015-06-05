@@ -9,7 +9,7 @@
     </head>
     <body>
         <div>
-                <div class="userStatus">
+                <div class="aside">
                     <strong>이연우</strong><span>님 안녕하세요.</span>
                 </div>
             <table class="table table-hover">

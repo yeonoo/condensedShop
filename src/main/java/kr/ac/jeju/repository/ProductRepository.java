@@ -1,11 +1,13 @@
 package kr.ac.jeju.repository;
 
 import java.util.List;
+
 import org.springframework.stereotype.Repository;
-import kr.ac.jeju.controller.model.Product;
+
+import kr.ac.jeju.model.Product;
 
 @Repository
-public interface ProductListDao {
+public interface ProductRepository {
 
 	List<Product> findAll();
 
