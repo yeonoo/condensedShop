@@ -11,6 +11,7 @@
         <div class="box">
             <h3>(주)제주대학교님의 상품</h3>
         </div>
+        <form action="save" method="post">
         <div class="box">
             <label class="col-sm-4 control-label writeItem">상품 이미지</label>
             <input type="file" id="file" onchange="fileNameInput()">
@@ -22,24 +23,25 @@
         <div class="box">
              <label class="col-sm-4 control-label writeItem">상품명</label>
              <div class="col-sm-7 col-sm-offeset-1">
-                 <input type="text" class="form-control">
+                 <input type="text" name="title" class="form-control">
              </div>
         </div>
         <div class="box">
             <label class="col-sm-4 control-label writeItem">가격</label>
             <div class="col-sm-7 col-sm-offeset-1">
-                 <input type="text" class="form-control">
+                 <input type="text" name="price" class="form-control">
             </div>
         </div>
         <div class="box">
-            <label class="col-sm-4 control-label writeItem">상품상세설명</label>
+            <label class="col-sm-4 control-label writeItem">판매자</label>
             <div class="col-sm-7 col-sm-offeset-1">
-             <textarea class="form-control" rows="8"></textarea>
+                 <input type="text" name="provider" class="form-control">
             </div>
         </div>
         <div class="box writeBtn">
             <button type="submit" class="btn btn-default">등록</button>
             <button type="button" class="btn btn-default">취소</button>
         </div>
+        </form>
     </body>
 </html>
