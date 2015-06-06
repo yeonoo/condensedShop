@@ -13,7 +13,9 @@
 	</insert>
 	
 	<delete id="delete">
-		delete from product where id = #{id}
+		delete
+		from product
+		where id = #{id}
 	</delete>
 	
 	<select id="findById" resultType="Product">
@@ -23,6 +25,8 @@
 	</select>
 
 	<update id="update" parameterType="Product"> 
-		update product set id=#{id}, image=#{image}, title=#{title}, price=#{price}, provider=#{provider} where id = #{id}
+		update product
+		set id=#{id}, image=#{image}, title=#{title}, price=#{price}, provider=#{provider}
+		where id = #{id}
 	</update>
 </mapper>

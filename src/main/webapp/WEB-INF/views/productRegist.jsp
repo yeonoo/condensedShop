@@ -40,7 +40,7 @@
         </div>
         <div class="box writeBtn">
             <button type="submit" class="btn btn-default">등록</button>
-            <button type="button" class="btn btn-default">취소</button>
+            <a href="productList" class="btn btn-default">취소</a>
         </div>
         </form>
     </body>

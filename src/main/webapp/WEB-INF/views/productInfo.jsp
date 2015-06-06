@@ -9,11 +9,11 @@
         <link rel="stylesheet" href="/resources/condensed-shop.css" />
     </head>
     <body>    
-		<c:forEach items="${productInfo}" var="product">
+
         <div class="box">
             <div id="statusBtn">
-                <button class="btn btn-success">목록</button>
-                <button class="btn btn-warning">수정</button>
+                <a href="productList" class="btn btn-success">목록</a>
+                <a href="productModify?id=${product.id}" class="btn btn-warning">수정</a>
             </div>
             <h2>${product.title }</h2>
         </div>
@@ -41,6 +41,5 @@
                 </p>
             </div>
         </div>
-        </c:forEach>
     </body>
 </html>
