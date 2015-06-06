@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="/resources/bootstrap.css" />
         <link rel="stylesheet" href="/resources/condensed-shop.css" />
     </head>
-    <body>
-   		<c:forEach items="${productInfo}" var="product">
+    <body>    
+		<c:forEach items="${productInfo}" var="product">
         <div class="box">
             <div id="statusBtn">
                 <button class="btn btn-success">목록</button>
@@ -26,7 +26,7 @@
                 </p>
                 <p>
                     이름:
-                    <strong>${product.provider} }</strong>
+                    <strong>${product.provider }</strong>
                 </p>
                 <button id="buyBtn" class="btn btn-default">구매</button>
             </div>

@@ -28,7 +28,7 @@
 					<c:forEach items="${productList}" var="product">
 					<tr>
 						<th scope="row">${product.image }</th>
-						<td><a href="info?id=${product.id}">${product.title }</a></td>
+						<td><a href="productInfo?id=${product.id}">${product.title }</a></td>
 						<td>${product.price }</td>
 						<td>${product.provider }</td>
 						<td><a href="delete?id=${product.id}"><span class="btn btn-default">삭제</span></a></td>
