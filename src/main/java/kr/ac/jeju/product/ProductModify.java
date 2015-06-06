@@ -8,14 +8,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/productModify")
+@RequestMapping
 public class ProductModify {
 	@Autowired
 	private ProductService productService;
 	
-	@RequestMapping
+	@RequestMapping("/productModify")
 	public Product getInfo(Product product) {
 		return productService.getInfo(product);
-	}
+	}	
 
+	@RequestMapping("/update")
+	public String update(Product product) {
+		productService.update(product);
+		return "redirect:productList";
+	}
 }

@@ -9,4 +9,5 @@ public interface ProductService {
 	void save(Product product);
 	void delete(Product product);
 	Product getInfo(Product product);
+	void update(Product product);
 }

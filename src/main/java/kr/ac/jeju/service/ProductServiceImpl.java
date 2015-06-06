@@ -32,4 +32,10 @@ public class ProductServiceImpl implements ProductService {
 	public Product getInfo(Product product) {
 		return productRepository.findById(product);
 	}
+
+	@Override
+	public void update(Product product) {
+		productRepository.update(product);
+		
+	}
 }
