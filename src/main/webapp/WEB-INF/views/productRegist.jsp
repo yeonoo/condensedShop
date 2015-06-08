@@ -9,9 +9,9 @@
     </head>
     <body>
         <div class="box">
-            <h3>(주)제주대학교님의 상품</h3>
+            <h3>${product.provider }님의 상품</h3>
         </div>
-        <form action="save" method="post">
+        <form action="regist" method="post">
         <div class="box">
             <label class="col-sm-4 control-label writeItem">상품 이미지</label>
             <input type="file" id="file" onchange="fileNameInput()">
@@ -33,9 +33,9 @@
             </div>
         </div>
         <div class="box">
-            <label class="col-sm-4 control-label writeItem">판매자</label>
+            <label class="col-sm-4 control-label writeItem">상품상세설명</label>
             <div class="col-sm-7 col-sm-offeset-1">
-                 <input type="text" name="provider" class="form-control">
+             <textarea name="explanation" class="form-control" rows="8"></textarea>
             </div>
         </div>
         <div class="box writeBtn">

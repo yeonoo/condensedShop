@@ -4,12 +4,12 @@
 <mapper namespace="kr.ac.jeju.repository.ProductRepository">
 	<select id="findAll" resultType="Product" >
 		select 
-			id, image, title, price, provider
+			id, image, title, price, provider, explanation
 		from product
 	</select>
 	
 	<insert id="insert" parameterType="Product">
-		insert into product(title, price, provider) values(#{title}, #{price}, #{provider})
+		insert into product(title, price, provider, explanation) values(#{title}, #{price}, #{provider}, #{explanation)
 	</insert>
 	
 	<delete id="delete">
@@ -20,11 +20,11 @@
 	
 	<select id="findById" resultType="Product">
 		select 
-			id, image, title, price, provider	
+			id, image, title, price, provider, explanation
 		from product where id = #{id}
 	</select>
 
 	<update id="update" parameterType="Product"> 
-		update product set title=#{title}, price=#{price} where id = #{id}
+		update product set title=#{title}, price=#{price}, explanation=#{explanation} where id = #{id}
 	</update>
 </mapper>

@@ -35,9 +35,7 @@
             <div id="productDetailsBox">
                 <h3>상품상세설명</h3>
                 <p id="productDetailsInfo">
-                    	상품A는 품질이 좋습니다.<br>
-                    	상품A는 가격이 저렴합니다.<br>
-                    	상품 A는 20% 할인 가격으로 제공됩니다.
+                    ${product.explanation }
                 </p>
             </div>
         </div>

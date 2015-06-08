@@ -6,6 +6,7 @@ public class Product {
 	private String title;
 	private int price;
 	private String provider;
+	private String explanation;
 	public int getId() {
 		return id;
 	}
@@ -35,5 +36,11 @@ public class Product {
 	}
 	public void setProvider(String provider) {
 		this.provider = provider;
+	}
+	public String getExplanation() {
+		return explanation;
+	}
+	public void setExplanation(String explanation) {
+		this.explanation = explanation;
 	}
 }

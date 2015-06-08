@@ -37,7 +37,7 @@
         <div class="box">
             <label class="col-sm-4 control-label writeItem">상품상세설명</label>
             <div class="col-sm-7 col-sm-offeset-1">
-             <textarea class="form-control" rows="8" value="상품설명"></textarea>
+             <textarea name="explanation" class="form-control" rows="8">${product.explanation }</textarea>
             </div>
         </div>
         <div class="box writeBtn">

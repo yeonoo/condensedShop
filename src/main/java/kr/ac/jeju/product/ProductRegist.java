@@ -8,14 +8,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/save")
-public class ProductSave {
+@RequestMapping("/regist")
+public class ProductRegist {
 	@Autowired
 	private ProductService productService;
 	
 	@RequestMapping
 	public String save(Product product) {
-		productService.save(product);
+		productService.regist(product);
 		return "redirect:productList";
 	}
 
