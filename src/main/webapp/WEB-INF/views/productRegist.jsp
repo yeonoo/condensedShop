@@ -11,7 +11,7 @@
         <div class="box">
             <h3>${product.provider }님의 상품</h3>
         </div>
-        <form action="regist" method="post">
+        <form action="productRegist" method="post">
         <div class="box">
             <label class="col-sm-4 control-label writeItem">상품 이미지</label>
             <input type="file" id="file" onchange="fileNameInput()">

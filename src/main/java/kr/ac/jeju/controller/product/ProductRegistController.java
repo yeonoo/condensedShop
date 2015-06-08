@@ -1,6 +1,4 @@
-package kr.ac.jeju.product;
-
-import java.util.List;
+package kr.ac.jeju.controller.product;
 
 import kr.ac.jeju.model.Product;
 import kr.ac.jeju.service.ProductService;
@@ -10,14 +8,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/productList")
-public class ProductList {
-
+public class ProductRegistController {
 	@Autowired
 	private ProductService productService;
 	
-	@RequestMapping
-	public List<Product> list() {
-		return productService.list();
+	@RequestMapping("/productRegist")
+	public String regist(Product product) {
+		productService.regist(product);
+		return "redirect:productList";
 	}
 }
