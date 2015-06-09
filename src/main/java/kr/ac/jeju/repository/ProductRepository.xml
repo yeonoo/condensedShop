@@ -4,7 +4,7 @@
 <mapper namespace="kr.ac.jeju.repository.ProductRepository">
 	<select id="findAll" resultType="Product" >
 		select 
-			id, image, title, price, provider, explanation
+			*
 		from product
 	</select>
 	
@@ -20,7 +20,7 @@
 	
 	<select id="findById" resultType="Product">
 		select 
-			id, image, title, price, provider, explanation
+			*
 		from product where id = #{id}
 	</select>
 

@@ -13,7 +13,10 @@ public class UserSignupController {
 	private UserService userService;
 	
 	@RequestMapping("/signup")
-	public String signup(User user) {
+	public String signup(User user, String id) {
+		if(userService.login(id) != null) {
+			return "signup";
+		}
 		userService.signup(user);
 		return "redirect:productList";
 	}
