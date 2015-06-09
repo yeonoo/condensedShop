@@ -5,4 +5,11 @@
 	<insert id="signup" parameterType="User">
 		insert into user(id, password, name, authority) values(#{id}, #{password}, #{name}, #{authority})
 	</insert>
+	<select id="login" resultType="User">
+		select * from user where id = #{id}
+	</select>
+	
+	<select id="idChk" resultType="User">
+		select * from user where id = #{id} and password = #{password}
+	</select>
 </mapper>

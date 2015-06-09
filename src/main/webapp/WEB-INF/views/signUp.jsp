@@ -33,7 +33,7 @@
 					<div class="form-group">
 						<label for="inputPermission3" class="col-sm-4 control-label">Permission</label>
 						<div class="col-sm-6 col-sm-offset-2">
-							<select name="authority class="form-control">
+							<select name="authority" class="form-control">
 								<option value="1">판매자</option>
 								<option value="2">구매자</option>
 							</select>

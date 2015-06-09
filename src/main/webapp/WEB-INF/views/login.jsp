@@ -9,20 +9,20 @@
 	</head>
 	<body>
 		<div class="box">
-			<form class="form-horizontal">
+			<form action="login" class="form-horizontal" method="post">
 				<fieldset>
 					<legend>LOG IN</legend>
 					<div class="form-group">
 						<label for="inputEmail3" class="col-sm-4 control-label">ID</label>
 						<div class="col-sm-6">
-							<input type="text" class="form-control" id="inputEmail3" placeholder="ID">
+							<input type="text" name="id" class="form-control" id="inputEmail3" placeholder="ID">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>
 					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-4 control-label">Password</label>
 						<div class="col-sm-6">
-							<input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+							<input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
 						</div>
 						<div class="col-sm-2"></div>
 					</div>

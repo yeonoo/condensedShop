@@ -8,5 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository {
 
 	void signup(User user);
+	User login(String id);
+	User idChk(String id);
 
 }

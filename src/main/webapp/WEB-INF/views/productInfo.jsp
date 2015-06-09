@@ -14,6 +14,7 @@
             <div id="statusBtn">
                 <a href="productList" class="btn btn-success">목록</a>
                 <a href="productModify?id=${product.id}" class="btn btn-warning">수정</a>
+                <a href="delete?id=${product.id }"><span class="btn btn-default">삭제</span></a>
             </div>
             <h2>${product.title }</h2>
         </div>

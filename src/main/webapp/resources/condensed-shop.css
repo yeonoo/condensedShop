@@ -13,12 +13,18 @@ thead th {
     text-align: center;
 }
 
-.aside {
+.functionBtn {
     margin-bottom:30px;
     float:left;
 }
 
-#statusBtn {
+#userStatus {
+	width:130px;
+	margin-top:7.5px;
+	float:left;
+}
+
+.functionBtnOnLogin {
     width:200px;
     margin-bottom:30px;
     float:right;

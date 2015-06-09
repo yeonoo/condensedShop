@@ -6,4 +6,8 @@ public interface UserService {
 
 	void signup(User user);
 
+	User login(String id);
+
+	boolean idChk(String id, String password);
+
 }

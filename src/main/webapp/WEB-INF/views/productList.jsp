@@ -9,42 +9,51 @@
 		<link rel="stylesheet" href="/resources/condensed-shop.css" />
 	</head>
 	<body>
-		<div class="aside">
-			<a href="signUp.jeju"><span class="btn btn-primary">회원가입</span></a>
-			<a href="login.jeju"><span class="btn btn-default">로그인</span></a>
-		</div>
-		<div>
-			<table class="article table table-hover">
-				<thead>
-					<tr>
-						<th>상품 이미지</th>
-						<th>상품명</th>
-						<th>가격</th>
-						<th>판매자</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-					<c:forEach items="${productList }" var="product">
-					<tr>
-						<th scope="row">${product.image }</th>
-						<td><a href="productInfo?id=${product.id }">${product.title }</a></td>
-						<td>${product.price }</td>
-						<td>${product.provider }</td>
-						<td><a href="delete?id=${product.id }"><span class="btn btn-default">삭제</span></a></td>
-					</tr>
-					</c:forEach>
-				</tbody>
-			</table>
-			<div class="footer">
-				<a href="##"><span>이전</span></a>
-				<span>1</span>
-				<span>2</span>
-				<span>3</span>
-				<span>4</span>
-				<span>5</span>
-				<a href="##"><span>다음</span></a>
+		<c:if test="${user == null }">
+			<div class="functionBtn">
+				<a href="signUp.jeju"><span class="btn btn-primary">회원가입</span></a>
+				<a href="login.jeju"><span class="btn btn-default">로그인</span></a>
 			</div>
+		</c:if>
+		<c:if test="${user != null }">
+			<div id="userStatus">
+				<strong>${user.name }</strong><span>님 안녕하세요.</span>
+			</div>
+			<div class="functionBtnOnLogin">
+				<a href="productList" class="btn btn-default">로그아웃</a>
+   	    	    <c:if test="${user.authority == 1}">
+            		<a href="productRegist.jeju" class="btn btn-info">상품등록</a>
+            	</c:if>
+            </div>
+        </c:if>
+		<table class="article table table-hover">
+			<thead>
+				<tr>
+					<th>상품 이미지</th>
+					<th>상품명</th>
+					<th>가격</th>
+					<th>판매자</th>
+				</tr>
+			</thead>
+			<tbody>
+				<c:forEach items="${productList }" var="product">
+				<tr>
+					<th scope="row">${product.image }</th>
+					<td><a href="productInfo?id=${product.id }">${product.title }</a></td>
+					<td>${product.price }</td>
+					<td>${product.provider }</td>
+				</tr>
+				</c:forEach>
+			</tbody>
+		</table>
+		<div class="footer">
+			<a href="##"><span>이전</span></a>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<span>5</span>
+			<a href="##"><span>다음</span></a>
 		</div>
 	</body>
 </html>
