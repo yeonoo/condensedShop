@@ -9,15 +9,14 @@
         <link rel="stylesheet" href="/resources/condensed-shop.css" />
     </head>
     <body>    
-
-        <div class="box">
-            <div id="statusBtn">
-                <a href="productList" class="btn btn-success">목록</a>
-                <a href="productModify?id=${product.id}" class="btn btn-warning">수정</a>
-                <a href="delete?id=${product.id }"><span class="btn btn-default">삭제</span></a>
-            </div>
-            <h2>${product.title }</h2>
-        </div>
+		<a href="productList" id="listBtn" class="btn btn-success">목록</a>
+		<h2 id="productTitle">${product.title }</h2>
+		<div class="functionBtnOnLogin" id="ForProvider">
+		    <c:if test="${product.provider == user.name}">
+		     <a href="productModify?id=${product.id}" class="btn btn-warning">수정</a>
+		     <a href="delete?id=${product.id }"><span class="btn btn-default">삭제</span></a>
+		 </c:if>
+		</div>
         <div class="box">
             <img src="" id="productImage" class="img-rounded" alt="productImage" />
             <div id="productInfo">

@@ -24,11 +24,16 @@ thead th {
 	float:left;
 }
 
+#listBtn {
+	float:right;
+}
+
 .functionBtnOnLogin {
     width:200px;
     margin-bottom:30px;
     float:right;
 }
+
 h2 {
     margin-botton:30px;
     margin-top:0;
