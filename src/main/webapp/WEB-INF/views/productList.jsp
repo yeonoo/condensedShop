@@ -18,6 +18,7 @@
 		<c:if test="${user != null }">
 			<div id="userStatus">
 				<strong>${user.name }</strong><span>님 안녕하세요.</span>
+				<a href="purchaseCartList?demander=${user.id }" class="btn btn-success">장바구니</a>
 			</div>
 			<div class="functionBtnOnLogin">
 				<a href="productList" class="btn btn-default">로그아웃</a>

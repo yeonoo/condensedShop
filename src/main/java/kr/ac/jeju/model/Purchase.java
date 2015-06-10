@@ -1,17 +1,17 @@
 package kr.ac.jeju.model;
 
-public class Product {
-	private int id;
+public class Purchase {
+	private int listNum;
 	private String image;
 	private String title;
 	private int price;
 	private String provider;
-	private String explanation;
-	public int getId() {
-		return id;
+	private String demander;
+	public int getListNum() {
+		return listNum;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setListNum(int listNum) {
+		this.listNum = listNum;
 	}
 	public String getImage() {
 		return image;
@@ -37,10 +37,10 @@ public class Product {
 	public void setProvider(String provider) {
 		this.provider = provider;
 	}
-	public String getExplanation() {
-		return explanation;
+	public String getDemander() {
+		return demander;
 	}
-	public void setExplanation(String explanation) {
-		this.explanation = explanation;
+	public void setDemander(String demander) {
+		this.demander = demander;
 	}
 }

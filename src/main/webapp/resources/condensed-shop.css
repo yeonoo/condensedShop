@@ -13,15 +13,19 @@ thead th {
     text-align: center;
 }
 
+.productInfo {
+	border: 0px;
+}
+
 .functionBtn {
     margin-bottom:30px;
     float:left;
 }
 
 #userStatus {
-	width:130px;
-	margin-top:7.5px;
+	width:400px;
 	float:left;
+	text-align: left;
 }
 
 #listBtn {
@@ -32,6 +36,7 @@ thead th {
     width:200px;
     margin-bottom:30px;
     float:right;
+    text-align:right;
 }
 
 h2 {

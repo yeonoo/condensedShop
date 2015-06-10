@@ -20,6 +20,6 @@ public class ProductModifyController {
 	@RequestMapping("/modifyUpdate")
 	public String update(Product product) {
 		productService.update(product);
-		return "redirect:productList";
+		return "redirect:productInfo?id=${product.id}";
 	}
 }
