@@ -1,6 +1,7 @@
 package kr.ac.jeju.controller.product;
 
 import kr.ac.jeju.model.Product;
+import kr.ac.jeju.model.User;
 import kr.ac.jeju.service.ProductService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,9 +12,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProductRegistController {
 	@Autowired
 	private ProductService productService;
-	
+
 	@RequestMapping("/productRegist")
-	public String regist(Product product) {
+	public String regist(Product product, User user) {
+		product.setProvider(user.getName());
 		productService.regist(product);
 		return "redirect:productList";
 	}

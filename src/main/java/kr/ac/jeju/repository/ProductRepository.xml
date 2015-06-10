@@ -9,7 +9,7 @@
 	</select>
 	
 	<insert id="insert" parameterType="Product">
-		insert into product(title, price, provider, explanation) values(#{title}, #{price}, #{provider}, #{explanation)
+		insert into product(title, price, provider, explanation) values(#{title}, #{price}, #{provider}, #{explanation})
 	</insert>
 	
 	<delete id="delete">

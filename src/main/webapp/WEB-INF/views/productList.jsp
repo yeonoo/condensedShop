@@ -22,7 +22,7 @@
 			<div class="functionBtnOnLogin">
 				<a href="productList" class="btn btn-default">로그아웃</a>
    	    	    <c:if test="${user.authority == 1}">
-            		<a href="productRegist.jeju" class="btn btn-info">상품등록</a>
+            		<a href="productRegistForm.jeju?provider=${user.id }" class="btn btn-info">상품등록</a>
             	</c:if>
             </div>
         </c:if>
