@@ -20,4 +20,10 @@
 		from purchase
 		where listNum = #{listNum}
 	</delete>
+	
+	<select id="sumPrice" resultType="Purchase">
+		select SUM(price)
+		from purchase
+		where demander = #{demander}
+	</select>
 </mapper>

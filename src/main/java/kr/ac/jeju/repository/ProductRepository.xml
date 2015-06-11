@@ -10,8 +10,8 @@
 	
 	<insert id="insert" parameterType="Product">
 		insert into
-		product(title, price, provider, explanation)
-		values(#{title}, #{price}, #{provider}, #{explanation})
+		product(image, title, price, provider, explanation)
+		values(#{image}, #{title}, #{price}, #{provider}, #{explanation})
 	</insert>
 	
 	<delete id="delete">
@@ -29,7 +29,7 @@
 
 	<update id="update" parameterType="Product"> 
 		update product
-		set title=#{title}, price=#{price}, explanation=#{explanation}
+		set image=#{image}, title=#{title}, price=#{price}, explanation=#{explanation}
 		where id = #{id}
 	</update>
 </mapper>

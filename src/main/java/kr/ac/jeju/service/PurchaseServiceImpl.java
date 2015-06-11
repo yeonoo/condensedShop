@@ -27,4 +27,9 @@ public class PurchaseServiceImpl implements PurchaseService {
 	public void delete(Purchase purchase) {
 		purchaseRepository.delete(purchase);
 	}
+
+	@Override
+	public Integer sumPrice(Purchase purchase) {
+		return purchaseRepository.sumPrice(purchase);
+	}
 }

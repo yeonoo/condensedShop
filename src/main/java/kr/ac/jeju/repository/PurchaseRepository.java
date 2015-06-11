@@ -11,4 +11,5 @@ public interface PurchaseRepository {
 	void insert(Purchase purchase);
 	List<Purchase> findByDemander(Purchase purchase);
 	void delete(Purchase purchase);
+	Integer sumPrice(Purchase purchase);
 }

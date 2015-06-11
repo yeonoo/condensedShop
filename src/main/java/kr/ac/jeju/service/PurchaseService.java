@@ -8,4 +8,5 @@ public interface PurchaseService {
 	void insert(Purchase purchase);
 	List<Purchase> cartList(Purchase purchase);
 	void delete(Purchase purchase);
+	Integer sumPrice(Purchase purchase);
 }

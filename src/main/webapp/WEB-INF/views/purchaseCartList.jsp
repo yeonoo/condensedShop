@@ -1,12 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c"    uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>condensed shop - USER CART PAGE</title>
-        <link rel="stylesheet" href="/resources/bootstrap.css" />
-        <link rel="stylesheet" href="/resources/condensed-shop.css" />
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<title>condensed shop - USER CART PAGE</title>
+		<link rel="stylesheet" href="/resources/bootstrap.css" />
+		<link rel="stylesheet" href="/resources/condensed-shop.css" />
     </head>
     <body>
     	<div class="aside">
@@ -23,7 +23,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${purchaseList }" var="purchase">
+				<c:forEach items="${cartList }" var="purchase">
 					<tr>
 						<th scope="row">${purchase.image }</th>
 						<td><a href="productInfo?id=${purchase.title }">${purchase.title }</a></td>
@@ -36,7 +36,10 @@
 		</table>
 		<div class="footer">
 			<label>총가격</label>
-			<em></em>
+			<em>${sumPrice }</em>
+			<div id="listBtn">
+				<a href="productList" class="btn btn-success">목록</a>
+			</div>	
 		</div>
     </body>
 </html>

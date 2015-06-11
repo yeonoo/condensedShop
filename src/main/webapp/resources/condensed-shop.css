@@ -29,7 +29,8 @@ thead th {
 }
 
 #listBtn {
-	float:right;
+    float:right;
+    text-align:right;
 }
 
 .functionBtnOnLogin {
