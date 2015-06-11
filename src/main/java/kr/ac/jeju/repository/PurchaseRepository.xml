@@ -21,7 +21,7 @@
 		where listNum = #{listNum}
 	</delete>
 	
-	<select id="sumPrice" resultType="Purchase">
+	<select id="sumPrice" resultType="integer">
 		select SUM(price)
 		from purchase
 		where demander = #{demander}

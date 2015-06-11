@@ -5,6 +5,7 @@ import kr.ac.jeju.service.PurchaseService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -14,12 +15,11 @@ public class PurchaseCartListController {
 	private PurchaseService purchaseService;
 	
 	@RequestMapping("/purchaseCartList")
-	public ModelAndView purchaseCartList(Purchase purchase) {
+	public ModelAndView purchaseCartList(Purchase purchase, Model model) {
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("purchaseCartList");
 		mv.addObject("cartList", purchaseService.cartList(purchase));
-		Integer sumPrice = purchaseService.sumPrice(purchase);
-		mv.addObject("sumPrice", sumPrice);
+		mv.addObject("sumPrice", purchaseService.sumPrice(purchase));
 		return mv;
 	}
 }
