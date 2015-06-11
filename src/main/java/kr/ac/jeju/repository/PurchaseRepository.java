@@ -13,4 +13,6 @@ public interface PurchaseRepository {
 
 	List<Purchase> findByDemander(Purchase purchase);
 
+	void delete(Purchase purchase);
+
 }

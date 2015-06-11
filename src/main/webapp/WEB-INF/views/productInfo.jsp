@@ -18,7 +18,7 @@
 			 	</c:if>
 			</div>
 		</div>
-		<form action="purchaseCartAdd?demander=${user.name }" method="post">
+		<form action="purchaseCartAdd?demander=${user.id }" method="post">
 			<h2><input name="title" class="productInfo" value="${product.title }" readonly></h2>
 			<div class="box">
 				<input type="text" name="image" class="hidden" value="${product.image }">

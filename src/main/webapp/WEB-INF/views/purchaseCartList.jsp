@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="c"    uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
-<html lang="ko">
+<html>
     <head>
         <meta charset="UTF-8">
         <title>condensed shop - USER CART PAGE</title>
@@ -19,16 +19,18 @@
 					<th>상품명</th>
 					<th>가격</th>
 					<th>판매자</th>
+					<th></th>
 				</tr>
 			</thead>
 			<tbody>
-				<c:forEach items="${purchaseCartList }" var="purchase">
-				<tr>
-					<th scope="row">${purchase.image }</th>
-					<td><a href="productInfo?id=${purchase.title }">${purchase.title }</a></td>
-					<td>${purchase.price }</td>
-					<td>${purchase.provider }</td>
-				</tr>
+				<c:forEach items="${purchaseList }" var="purchase">
+					<tr>
+						<th scope="row">${purchase.image }</th>
+						<td><a href="productInfo?id=${purchase.title }">${purchase.title }</a></td>
+						<td>${purchase.price }</td>
+						<td>${purchase.provider }</td>
+						<td><a href="purchaseCancel?listNum=${purchase.listNum }&demander=${user.id}" class="btn btn-danger">구매취소</a></td>
+					</tr>
 				</c:forEach>
 			</tbody>
 		</table>

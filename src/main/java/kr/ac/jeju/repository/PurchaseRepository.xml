@@ -10,7 +10,7 @@
 	</select>
 	
 	<insert id="insert" parameterType="Purchase">
-		insert into purchase(title, price, provider, demander) values(#{title}, #{price}, #{provider}, #{demander})
+		insert into purchase(image, title, price, provider, demander) values(#{image}, #{title}, #{price}, #{provider}, #{demander})
 	</insert>
 	
 	<delete id="delete">

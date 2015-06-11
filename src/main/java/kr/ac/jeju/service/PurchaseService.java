@@ -10,4 +10,6 @@ public interface PurchaseService {
 
 	List<Purchase> cartList(Purchase purchase);
 
+	void delete(Purchase purchase);
+
 }

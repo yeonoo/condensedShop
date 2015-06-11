@@ -16,6 +16,7 @@ public class PurchaseCartAddController {
 	@RequestMapping("/purchaseCartAdd")
 	public String cartAdd(Purchase purchase) {
 		purchaseService.insert(purchase);
-		return "redirect:productList";
+	      String demander = purchase.getDemander();
+	      return "redirect:purchaseCartList?demander=" + demander;
 	}
 }

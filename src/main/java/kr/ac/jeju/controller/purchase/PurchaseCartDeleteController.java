@@ -1,7 +1,5 @@
 package kr.ac.jeju.controller.purchase;
 
-import java.util.List;
-
 import kr.ac.jeju.model.Purchase;
 import kr.ac.jeju.service.PurchaseService;
 
@@ -10,13 +8,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class PurchaseCartListController {
-
+public class PurchaseCartDeleteController {
+	
 	@Autowired
 	private PurchaseService purchaseService;
 	
-	@RequestMapping("/purchaseCartList")
-	public List<Purchase> cartList(Purchase purchase) {
-		return purchaseService.cartList(purchase);
-	}
+   @RequestMapping("/purchaseCancel")
+   public String cartDelete(Purchase purchase) {
+      purchaseService.delete(purchase);
+      String demander = purchase.getDemander();
+      return "redirect:purchaseCartList?demander=" + demander;
+   }
+
 }

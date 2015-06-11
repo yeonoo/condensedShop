@@ -24,4 +24,9 @@ public class PurchaseServiceImpl implements PurchaseService {
 		return purchaseRepository.findByDemander(purchase);
 	}
 
+	@Override
+	public void delete(Purchase purchase) {
+		purchaseRepository.delete(purchase);
+	}
+
 }
