@@ -5,10 +5,17 @@
 	<select id="findByDemander" resultType="Purchase" >
 		select 
 			*
-		from purchase where demander = #{demander}
+		from purchase
+		where demander = #{demander}
 	</select>
 	
 	<insert id="insert" parameterType="Purchase">
-		insert into purchase(image, title, price, provider, demander) values(#{image}, #{title}, #{price}, #{provider}, #{demander})
+		insert into purchase(title, price, provider, demander) values(#{title}, #{price}, #{provider}, #{demander})
 	</insert>
+	
+	<delete id="delete">
+		delete
+		from purchase
+		where listNum = #{listNum}
+	</delete>
 </mapper>

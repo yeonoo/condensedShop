@@ -15,7 +15,7 @@ public class PurchaseServiceImpl implements PurchaseService {
 	private PurchaseRepository purchaseRepository;
 	
 	@Override
-	public void cartAdd(Purchase purchase) {
+	public void insert(Purchase purchase) {
 		purchaseRepository.insert(purchase);
 	}
 
@@ -23,4 +23,5 @@ public class PurchaseServiceImpl implements PurchaseService {
 	public List<Purchase> cartList(Purchase purchase) {
 		return purchaseRepository.findByDemander(purchase);
 	}
+
 }

@@ -6,7 +6,8 @@ import kr.ac.jeju.model.Purchase;
 
 public interface PurchaseService {
 
-	void cartAdd(Purchase purchase);
+	void insert(Purchase purchase);
 
 	List<Purchase> cartList(Purchase purchase);
+
 }
