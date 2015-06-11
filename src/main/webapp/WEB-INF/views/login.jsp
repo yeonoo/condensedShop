@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c"    uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -12,6 +13,9 @@
 			<form action="login" class="form-horizontal" method="post">
 				<fieldset>
 					<legend>LOG IN</legend>
+					<c:if test="${error == true }">
+						<span>아이디와 비밀번호를 확인 후 다시 로그인 해주세요.</span>
+					</c:if>
 					<div class="form-group">
 						<label for="inputEmail3" class="col-sm-4 control-label">ID</label>
 						<div class="col-sm-6">
@@ -29,7 +33,7 @@
 				</fieldset>
 				<div class="footer">
 						<button type="submit" class="btn btn-default">로그인</button>
-						<button type="button" class="btn btn-default">취소</button>
+						<a href="productList"class="btn btn-default">취소</a>
 				</div>
 			</form>
 		</div>

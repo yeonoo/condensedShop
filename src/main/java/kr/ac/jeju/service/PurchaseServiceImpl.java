@@ -10,10 +10,9 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class PurchaseServiceImpl implements PurchaseService {
-
 	@Autowired
 	private PurchaseRepository purchaseRepository;
-	
+
 	@Override
 	public void insert(Purchase purchase) {
 		purchaseRepository.insert(purchase);
@@ -28,5 +27,4 @@ public class PurchaseServiceImpl implements PurchaseService {
 	public void delete(Purchase purchase) {
 		purchaseRepository.delete(purchase);
 	}
-
 }

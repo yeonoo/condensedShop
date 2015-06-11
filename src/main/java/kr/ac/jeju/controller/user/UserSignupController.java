@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserSignupController {
 	@Autowired
 	private UserService userService;
-	
+
 	@RequestMapping("/signup")
 	public String signup(User user, String id) {
 		if(userService.login(id) != null) {
@@ -20,5 +20,4 @@ public class UserSignupController {
 		userService.signup(user);
 		return "redirect:productList";
 	}
-
 }

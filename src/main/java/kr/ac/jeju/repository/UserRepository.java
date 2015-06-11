@@ -6,9 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository {
-
 	void signup(User user);
 	User login(String id);
 	User idChk(String id);
-
 }

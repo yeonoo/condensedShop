@@ -9,15 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class PurchaseCartDeleteController {
-	
 	@Autowired
 	private PurchaseService purchaseService;
-	
-   @RequestMapping("/purchaseCancel")
-   public String cartDelete(Purchase purchase) {
-      purchaseService.delete(purchase);
-      String demander = purchase.getDemander();
-      return "redirect:purchaseCartList?demander=" + demander;
-   }
 
+	@RequestMapping("/purchaseCancel")
+	public String cartDelete(Purchase purchase) {
+		purchaseService.delete(purchase);
+		String demander = purchase.getDemander();
+		return "redirect:purchaseCartList?demander=" + demander;
+	}
 }

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class ProductInfoController {
 	@Autowired
-	private ProductService productService;	
-	
+	private ProductService productService;
+
 	@RequestMapping("/productInfo")
 	public Product info(Product product) {
 		return productService.getInfo(product);

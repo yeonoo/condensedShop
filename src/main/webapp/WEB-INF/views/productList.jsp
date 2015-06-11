@@ -21,7 +21,7 @@
 				<a href="purchaseCartList?demander=${user.id }" class="btn btn-success">장바구니</a>
 			</div>
 			<div class="functionBtnOnLogin">
-				<a href="productList" class="btn btn-default">로그아웃</a>
+				<a href="logout" class="btn btn-default">로그아웃</a>
    	    	    <c:if test="${user.authority == 1}">
             		<a href="productRegistForm.jeju?provider=${user.id }" class="btn btn-info">상품등록</a>
             	</c:if>

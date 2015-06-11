@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class PurchaseCartAddController {
-	
 	@Autowired
 	private PurchaseService purchaseService;
-	
+
 	@RequestMapping("/purchaseCartAdd")
 	public String cartAdd(Purchase purchase) {
 		purchaseService.insert(purchase);
-	      String demander = purchase.getDemander();
-	      return "redirect:purchaseCartList?demander=" + demander;
+		String demander = purchase.getDemander();
+		return "redirect:purchaseCartList?demander=" + demander;
 	}
 }

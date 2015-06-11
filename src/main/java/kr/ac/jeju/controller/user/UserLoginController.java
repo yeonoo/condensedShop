@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserLoginController {
 	@Autowired
 	private UserService userService;
-	
+
 	@RequestMapping("/login")
 	public String logChk (String id, String password, HttpSession httpSession) {
 		if(userService.idChk(id, password)) {
@@ -23,5 +23,4 @@ public class UserLoginController {
 		}
 		return "/login";
 	}
-
 }

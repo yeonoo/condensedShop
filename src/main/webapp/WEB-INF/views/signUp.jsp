@@ -13,26 +13,26 @@
 				<fieldset>
 					<legend>SIGN UP</legend>
 					<div class="form-group">
-						<label for="inputID3" class="col-sm-4 control-label">ID</label>
-						<div class="col-sm-6 col-sm-offset-2">
+						<label for="inputID3" class="col-md-4 control-label">ID</label>
+						<div class="col-md-6">
 							<input type="text" name="id" class="form-control" id="inputID3" placeholder="ID">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-4 control-label">Password</label>
-						<div class="col-sm-6 col-sm-offset-2">
+						<label for="inputPassword3" class="col-md-4 control-label">Password</label>
+						<div class="col-md-6">
 							<input type="password" name="password" class="form-control" id="inputPassword3" placeholder="Password">
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputName3" class="col-sm-4 control-label">Name</label>
-						<div class="col-sm-6 col-sm-offset-2">
+						<label for="inputName3" class="col-md-4 control-label">Name</label>
+						<div class="col-md-6">
 							<input type="text" name="name" class="form-control" id="inputName3" placeholder="Name">
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="inputPermission3" class="col-sm-4 control-label">Permission</label>
-						<div class="col-sm-6 col-sm-offset-2">
+						<div class="col-md-6">
 							<select name="authority" class="form-control">
 								<option value="1">판매자</option>
 								<option value="2">구매자</option>
@@ -42,7 +42,7 @@
 				</fieldset>
 				<div class="footer">
 					<button type="submit" class="btn btn-default">회원가입</button>
-					<button type="button" class="btn btn-default">취소</button>
+					<a href="productList" class="btn btn-default">취소</a>
 				</div>
 			</form>
 		</div>

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ProductModifyController {
 	@Autowired
 	private ProductService productService;
-	
+
 	@RequestMapping("/productModify")
 	public Product getInfo(Product product) {
 		return productService.getInfo(product);
@@ -20,6 +20,7 @@ public class ProductModifyController {
 	@RequestMapping("/modifyUpdate")
 	public String update(Product product) {
 		productService.update(product);
-		return "redirect:productInfo?id=${product.id}";
+		int id = product.getId();
+		return "redirect:productInfo?id=" + id;
 	}
 }
