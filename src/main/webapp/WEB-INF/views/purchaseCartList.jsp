@@ -26,8 +26,8 @@
 				<c:forEach items="${cartList }" var="purchase">
 					<tr>
 						<th scope="row">
-							<div class="productImage">
-								<img src="/resources/${purchase.image }" />
+							<div class="productImageBox">
+								<img src="resources/${purchase.image }" class="productImage" />
 							</div>
 						</th>
 						<td><a href="productInfo?id=${purchase.title }">${purchase.title }</a></td>

@@ -20,7 +20,7 @@
                 <input type="text" name="image" class="form-control" value="${product.image }">
             </div>
             <label for="file" class="col-sm-2"><span class="btn btn-default">찾아보기</span></label>
-            <img src="${product.image }" class="col-sm-2" alt="상품이미지" />	
+            <img src="resources/${product.image }" class="col-sm-2 previewImage" alt="상품이미지" />	
         </div>
         <div class="box">
              <label class="col-sm-4 control-label writeItem">상품명</label>

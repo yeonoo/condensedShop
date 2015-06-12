@@ -23,6 +23,11 @@ thead th {
     float:left;
 }
 
+.previewImage {
+	width: 15%;
+	height: 10%;
+}
+
 #userStatus {
 	width:400px;
 	float:left;
