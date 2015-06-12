@@ -13,7 +13,7 @@
 			<a href="productList" class="btn btn-success">목록</a>
 			<c:if test="${product.provider == user.name}">
 				<a href="productModify?id=${product.id}" class="btn btn-warning">수정</a>
-				<a href="delete?id=${product.id }"><span class="btn btn-default">삭제</span></a>
+				<a href="productDelete?id=${product.id }"><span class="btn btn-default">삭제</span></a>
 			</c:if>
 		</div>
 		<form action="purchaseCartAdd?demander=${user.id }" method="post">

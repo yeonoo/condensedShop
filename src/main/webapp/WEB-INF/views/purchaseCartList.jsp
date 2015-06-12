@@ -39,8 +39,8 @@
 			</tbody>
 		</table>
 		<div class="footer">
-			<label>총가격</label>
-			<em>${sumPrice }</em>
+			<label>총 구매 가격</label>
+			<em>${sumPrice }원</em>
 			<div id="listBtn">
 				<a href="productList" class="btn btn-success">목록</a>
 			</div>	
