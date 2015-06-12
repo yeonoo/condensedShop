@@ -25,7 +25,11 @@
 			<tbody>
 				<c:forEach items="${cartList }" var="purchase">
 					<tr>
-						<th scope="row">${purchase.image }</th>
+						<th scope="row">
+							<div class="productImage">
+								<img src="/resources/${purchase.image }" />
+							</div>
+						</th>
 						<td><a href="productInfo?id=${purchase.title }">${purchase.title }</a></td>
 						<td>${purchase.price }</td>
 						<td>${purchase.provider }</td>

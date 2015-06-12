@@ -20,7 +20,7 @@
 			<h2><input name="title" class="productInfo" value="${product.title }" readonly></h2>
 			<div class="box">
 				<input type="text" name="image" class="hidden" value="${product.image }">
-				<img src="${product.image }" id="productImage" class="img-rounded" alt="productImage" />
+				<img src="/resources/${product.image }" id="productImage" class="img-rounded" alt="productImage" />
 				<div id="productInfo">
 					<p>
 						가격:

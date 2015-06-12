@@ -11,6 +11,7 @@ body {
 
 thead th {
     text-align: center;
+    width: 150px;
 }
 
 .productInfo {
@@ -31,6 +32,20 @@ thead th {
 #listBtn {
     float:right;
     text-align:right;
+}
+
+.productImageBox {
+	width: 150px;
+	height: 150px;
+	text-align: center;
+}
+
+.productImage {
+	width: 150px;
+	height: 150px;
+	max-width: 150px;
+	vertical-align: center;
+	text-align: center;
 }
 
 .functionBtnOnLogin {
